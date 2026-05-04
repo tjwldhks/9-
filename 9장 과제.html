@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 9 과제 - 센티미터 변환 프로그램</title>
+</head>
+<body>
+    <h2>16 - 센티미터를 피트와 인치로 변환</h2>
+    <p>참고 -  1피트 = 12인치, 1인치 = 2.54cm</p>
+    <script>
+        let cm = parseFloat(prompt("센티미터를 입력하세요:","0"));
+        let totalInch = cm / 2.54;
+        let feet = Math.floor(totalInch / 12);
+        let inch = totalInch % 12;
+        document.write(cm + " cm = " + feet + " 피트 " + inch.toFixed(2) + " 인치");
+    </script>
+    <hr>
+<h2>17 - 원기둥 부피 구하기</h2>
+<script>
+    let r = parseFloat(prompt("원기둥의 반지름을 입력하세요:","0"));
+    let h = parseFloat(prompt("원기둥의 높이를 입력하세요:","0"));
+    let colume = r * r *Math.PI * h;
+    document.write("원기둥의 부피는 " + colume.toFixed(2) + "입니다.");
+</script>
+<hr>
+<h2>18 - 네 자리 정수 자릿수 분리하기</h2>
+<script>
+    let num = parseInt(prompt("네 자리 정수를 입력하세요:","0"));
+    let thousand = Math.floor(num / 1000);
+    let hundred = Math.floor((num % 1000) / 100);
+    let ten = Math.floor((num % 100) / 10);
+    let one = num % 10;
+    document.write("천의 자리: " + thousand + "<br>");
+    document.write("백의 자리: " + hundred + "<br>");
+    document.write("십의 자리: " + ten + "<br>");
+    document.write("일의 자리: " + one + "<br>");
+</script>
+</body>
+</html>
